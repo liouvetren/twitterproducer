@@ -4,7 +4,7 @@ from confluent_kafka import Producer
 from smart_open import smart_open
 import sys
 import os 
-from time import time
+from time import time, sleep
 from math import sin, pi
 from random import random
 import json
