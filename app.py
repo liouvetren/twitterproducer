@@ -34,7 +34,7 @@ class TwitterProducer(object):
 					self.producer.produce(topic, value=message)
 					num += 1
 					sleeptime = 0.01*(1 + sin(time()*pi/30.)) + random() * 0.002
-					time.sleep(sleeptime)
+					sleep(sleeptime)
 			st += dt
 			print ( "%f time passed" % (time()-producer_start,) )
 			print ( "%d messages sent" % (num,) )
@@ -54,4 +54,4 @@ if __name__ == "__main__":
 	producer = TwitterProducer(s3_url, bootstrap_servers)
 	producer.produce(topic, start_time, end_time)
 
-	
+
