@@ -6,6 +6,7 @@ import sys
 import os 
 from time import time
 from math import sin, pi
+from random import random
 import json
 
 # s3://data-pool-liouvetren 2017/12/22/00/00 2017/12/22/00/01 localhost:9092 twitterdata
