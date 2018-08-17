@@ -34,7 +34,8 @@ class TwitterProducer(object):
 					num += 1
 					sleeptime = 0.001*(1 + sin(time()*pi/60.)) + random() * 0.0002
 					sleep(sleeptime)
-			
+			if st%5==0:
+				self.producer.flush()
 			st += dt
 			print ( "%f time passed" % (time()-producer_start,) )
 			print ( "%d messages sent" % (num,) )
