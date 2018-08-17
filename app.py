@@ -32,7 +32,7 @@ class TwitterProducer(object):
 				for message in f:
 					self.producer.produce(topic, value=message)
 					num += 1
-					sleeptime = 0.001*(1 + cos(time()*pi/60.)) + 0.0001
+					sleeptime = 0.001*(1 + cos(time()*pi/60.+0.3*pi)) + 0.0001
 					sleep(sleeptime)
 			if st.second %5==0:
 				self.producer.flush()
