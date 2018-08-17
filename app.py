@@ -5,7 +5,7 @@ from smart_open import smart_open
 import sys
 import os 
 from time import time, sleep
-from math import sin, pi
+from math import sin, cos, pi
 from random import random
 import json
 
