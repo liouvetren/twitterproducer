@@ -29,12 +29,12 @@ class TwitterProducer(object):
 			producer_start = time()
 			with smart_open( self.s3_url + '/' 
 				+ st.strftime('%Y/%m/%d/%H/%M.json'),'r' ) as f:
-				self.producer.flush()
 				for message in f:
 					self.producer.produce(topic, value=message)
 					num += 1
-					sleeptime = 0.001*(1 + sin(time()*pi/120.)) + random() * 0.0002
+					sleeptime = 0.001*(1 + sin(time()*pi/60.)) + random() * 0.0002
 					sleep(sleeptime)
+			
 			st += dt
 			print ( "%f time passed" % (time()-producer_start,) )
 			print ( "%d messages sent" % (num,) )
