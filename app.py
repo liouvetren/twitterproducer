@@ -33,7 +33,7 @@ class TwitterProducer(object):
 				for message in f:
 					self.producer.produce(topic, value=message)
 					num += 1
-					sleeptime = 0.01*(1 + sin(time()*pi/30.)) + random() * 0.002
+					sleeptime = 0.001*(1 + sin(time()*pi/30.)) + random() * 0.0002
 					sleep(sleeptime)
 			st += dt
 			print ( "%f time passed" % (time()-producer_start,) )
